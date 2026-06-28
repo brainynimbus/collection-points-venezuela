@@ -38,6 +38,9 @@ Una herramienta gratuita para coordinar la recolección y distribución de ayuda
 - **Auditoría inmutable** — todo queda registrado (quién, cuándo, qué, IP)
 - **Editar o desactivar el centro** en cualquier momento
 - **Eliminar cuenta** de forma autogestionada
+- **Genera imágenes para Instagram, TikTok, Facebook y X** con los datos de tu centro. Personaliza colores y descarga PNGs listos para publicar.
+
+
 
 ---
 
@@ -77,6 +80,7 @@ A free tool to coordinate the collection and distribution of humanitarian aid fo
 - **Immutable audit trail** — everything is recorded (who, when, what, IP)
 - **Edit or disable the center** at any time
 - **Delete account** self-service
+- **Generate images for Instagram, TikTok, Facebook, and X** with your center data (needs, surpluses, stats). Customize colors and download ready-to-post PNGs.
 
 ---
 
@@ -116,6 +120,7 @@ Un outil gratuit pour coordonner la collecte et la distribution d'aide humanitai
 - **Piste d'audit immuable** — tout est enregistré (qui, quand, quoi, IP)
 - **Modifier ou désactiver le centre** à tout moment
 - **Supprimer le compte** en libre-service
+- **Générez des images pour Instagram, TikTok, Facebook et X** avec les données de votre centre. Personnalisez les couleurs et téléchargez des PNG prêts à publier.
 
 ---
 
@@ -155,9 +160,26 @@ Uma ferramenta gratuita para coordenar a coleta e distribuição de ajuda humani
 - **Trilha de auditoria imutável** — tudo registrado (quem, quando, o quê, IP)
 - **Editar ou desativar o centro** a qualquer momento
 - **Excluir conta** de forma autônoma
+- **Gere imagens para Instagram, TikTok, Facebook e X** com os dados do seu centro. Personalize cores e baixe PNGs prontos para publicar.
 
 ---
 
-**centrosacopiovenezuela.org**
+## Public API
+
+Base URL: `https://api.centrosacopiovenezuela.org`
+
+Documentation: `docs/public-api.yaml` (OpenAPI 3.0 / Swagger)
+
+| Endpoint | Method | Description |
+|----------|--------|-------------|
+| `/health` | GET | Service status |
+| `/centros` | GET | List active centers (filterable by country, city) |
+| `/centros/stats/public` | GET | Global statistics |
+| `/centros/{id}` | GET | Center details (needs, surpluses, sponsors, dispatches) |
+| `/centros/{id}/estadisticas` | GET | Center inventory breakdown by category |
+
+No authentication required. Rate limited: 50 req/s.
+
+---
 
 Hecho por venezolanos para venezolanos. Sin fines de lucro.
